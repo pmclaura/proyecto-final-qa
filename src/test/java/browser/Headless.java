@@ -12,7 +12,7 @@ public class Headless implements IBrowser{
         System.setProperty("webdriver.chrome.driver","src/test/resources/driver/chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless","--window-size=1420,800");
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

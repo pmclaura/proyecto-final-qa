@@ -24,7 +24,6 @@ public class CRUDProjectTest extends TestBase{
         projectSection.nameProjectTxBox.setText(projectCreated);
         projectSection.addProjectButton.click();
         projectSection.selectListLabel.click();
-        projectSection.getProject(projectCreated).waitControlIsDisplayedInThePage();
         Assertions.assertTrue(projectSection.isProjectDisplayedInList(projectCreated), "ERROR! the project was not created");
     }
 }
