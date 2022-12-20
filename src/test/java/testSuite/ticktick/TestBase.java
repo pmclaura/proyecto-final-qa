@@ -18,12 +18,12 @@ public class TestBase {
     String user= GetProperties.getInstance().getUser();
     String password =GetProperties.getInstance().getPwd();
 
-    @BeforeEach
+    //@BeforeEach
     public void openBrowser(){
         Session.getInstance().getBrowser().get(GetProperties.getInstance().getHost());
     }
 
-    @AfterEach
+    //@AfterEach
     public void closeBrowser(){
         Session.getInstance().closeSession();
     }
